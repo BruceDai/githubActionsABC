@@ -16,6 +16,6 @@ jobs:
           ls ${{ github.workspace }}
       - name: checkout origin/main
         run: |
-          git checkout origin/main
+          git checkout main
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
