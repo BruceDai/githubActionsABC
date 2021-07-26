@@ -10,7 +10,7 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v2
         with:
-          repository: githubActionsABC/main
+          ref: main
           path: main
       - name: 6666 List files in the repository before checkout
         run: |
