@@ -10,15 +10,18 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v2
         with:
+          repository: githubActionsABC/main
           path: main
       - name: 6666 List files in the repository before checkout
         run: |
-          ls ${{ github.workspace }}      
+          ls ${{ github.workspace }}/main      
       - name: Check out repository code
         uses: actions/checkout@v2
+        with：
+          path: patch
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: 8888 List files in the repository
         run: |
-          ls ${{ github.workspace }}
+          ls ${{ github.workspace }}/patch
       - run: echo "🍏 This job's status is ${{ job.status }}."
